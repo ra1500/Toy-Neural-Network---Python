@@ -92,7 +92,7 @@ print()
 print('Gradiant matrix of W, sample rows x class columns', dhidden.shape)
 print(dhidden[0, 0])
 
-# ---- Backpropagation (partial derivative of the score with respect to the weights)----
+# ---- Backpropagation (partial derivative of the loss with respect to the weights)----
 dW2 = np.dot(hidden_layer.T, dscores)
 db2 = np.sum(dscores, axis=0, keepdims=True)
 dhidden = np.dot(dscores, W2.T)
